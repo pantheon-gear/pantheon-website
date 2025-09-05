@@ -11,7 +11,6 @@ body {
   font-family: Aspekta, Helvetica, Arial, sans-serif;
   font-weight: 450;
   font-size: 16px;
-  letter-spacing: 0.015em;
   display: flex;
   flex-direction: column;
   text-wrap: pretty;
@@ -56,11 +55,21 @@ a:has(#home-icon) {
   margin: 18px;
 }
 
+.shadow {
+  filter: drop-shadow(0 0 8px #27655fcc);
+}
+
 #nav-right > a {
   margin-right: 28px;
   text-decoration: none;
   color: inherit;
   text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+
+  &.nav-bold {
+    font-weight: 800;
+  }
 }
 
 .occupy-remaining,
@@ -83,6 +92,7 @@ a:has(#home-icon) {
   line-height: 0.7em;
   width: 50vw;
   max-width: 800px;
+  filter: drop-shadow(0 3px 2px #27655fcc);
 }
 
 #logo-sub {
@@ -90,6 +100,7 @@ a:has(#home-icon) {
   line-height: 0.7em;
   width: 75vw;
   max-width: 1300px;
+  filter: drop-shadow(0 3px 2px #27655fcc);
 }
 
 #footer {
