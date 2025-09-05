@@ -34,6 +34,11 @@ jobs:
         with:
           sparse-checkout: src/
           sparse-checkout-cone-mode: 'false'
+      - name: Move src contents to root
+        run: |
+          shopt -s dotglob
+          mv src/* .
+          rmdir src
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
