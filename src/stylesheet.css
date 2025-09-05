@@ -1,15 +1,16 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
 body {
-  margin: 0;
   background: #a3bdbb radial-gradient(#27655f, transparent 150%) fixed;
   color: #dfdcd4;
   font-family: Aspekta, Helvetica, Arial, sans-serif;
   font-weight: 450;
+  font-size: 16px;
   letter-spacing: 0.015em;
   display: flex;
   flex-direction: column;
@@ -48,8 +49,10 @@ main {
   z-index: 1;
 }
 
-#home-icon {
-  margin: 16px;
+a:has(#home-icon) {
+  width: 22px;
+  height: 20px;
+  margin: 18px;
 }
 
 #nav-right > a {
@@ -57,11 +60,6 @@ main {
   text-decoration: none;
   color: inherit;
   text-transform: uppercase;
-  font-size: 16px;
-}
-
-#footer {
-  /*height: 1000px;*/
 }
 
 #grid {
@@ -75,7 +73,30 @@ main {
 }
 
 #hero {
-  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 72px;
+  gap: 32px;
+}
+
+#title {
+  font-size: 10rem;
+  line-height: 0.7em;
+  width: 50vw;
+}
+
+#subtitle {
+  font-size: 6rem;
+  line-height: 0.7em;
+  width: 75vw;
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
@@ -83,6 +104,5 @@ main {
   border: 1px solid #ffffff5c;
   border-radius: 28px;
   min-height: 56px;
-  /*margin: 24px;*/
   position: relative;
 }
