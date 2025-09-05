@@ -1,0 +1,88 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #a3bdbb radial-gradient(#27655f, transparent 150%) fixed;
+  color: #dfdcd4;
+  font-family: Aspekta, Helvetica, Arial, sans-serif;
+  font-weight: 450;
+  letter-spacing: 0.015em;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background: #27655f;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8vh);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 24px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 24px;
+  margin: 0 24px 24px 24px;
+  z-index: 1;
+}
+
+#home-icon {
+  margin: 16px;
+}
+
+#nav-right > a {
+  margin-right: 28px;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#footer {
+  /*height: 1000px;*/
+}
+
+#grid {
+  display: flex;
+  flex: 1;
+  gap: 24px;
+}
+
+#grid > .card {
+  flex: 1;
+}
+
+#hero {
+  height: 300px;
+}
+
+.card {
+  background: #ffffff33;
+  border: 1px solid #ffffff5c;
+  border-radius: 28px;
+  min-height: 56px;
+  /*margin: 24px;*/
+  position: relative;
+}

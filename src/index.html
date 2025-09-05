@@ -3,8 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Pantheon</title>
+  <link href="assets/fonts/fonts.css" rel="stylesheet">
+  <link href="stylesheet.css" rel="stylesheet">
 </head>
 <body>
-Hello, world!
+<header class="card" id="header">
+  <svg id="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 24" width="26" height="24">
+    <use href="assets/home.svg#icon" x="2px" y="2px" fill="none" stroke="#27655f" stroke-width="4px"
+         stroke-linejoin="round"></use>
+    <use href="assets/home.svg#icon" x="2px" y="2px"></use>
+  </svg>
+  <nav id="nav-right">
+    <a href="#">Events</a>
+    <a href="#">Register</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+<main>
+  <div class="card" id="hero"></div>
+  <div id="grid">
+    <div class="card" id="card1"></div>
+    <div class="card" id="card2"></div>
+    <div class="card" id="card3"></div>
+  </div>
+  <div class="card" id="footer"></div>
+</main>
 </body>
 </html>
