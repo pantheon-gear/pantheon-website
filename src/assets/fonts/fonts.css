@@ -159,3 +159,19 @@
   font-display: swap;
   src: url('aspekta/Aspekta-1000.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: "obra-letra";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("obra-letra/KCObraLetraRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "obra-letra";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url('obra-letra/KCObraLetraBold.woff2') format('woff2');
+}
