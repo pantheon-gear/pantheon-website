@@ -1,20 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"/>
   <title>Page not found · Pantheon</title>
 
-  <!--  TODO: remove when deploying to pantheon.gearac.in -->
-  <base href="/pantheon-website/">
+  <!--  TODO: change to "/" when deploying to pantheon.gearac.in -->
+  <base href="/pantheon-website/"/>
 
-  <link href="assets/fonts/fonts.css" rel="stylesheet">
-  <link href="stylesheet.css" rel="stylesheet">
+  <link href="./assets/fonts/fonts.css" rel="stylesheet"/>
+  <link href="./styles/main.css" rel="stylesheet"/>
+  <link href="./styles/404.css" rel="stylesheet"/>
 </head>
+
 <body>
 <header class="card" id="header">
-  <a href=".">
-    <svg id="home-icon" viewBox="0 0 22 20" width="22" height="20">
-      <use href="assets/home.svg#icon"></use>
+  <a href="." id="home-button">
+    <svg viewBox="0 0 22 20" width="22" height="20">
+      <use href="assets/graphics/home.svg#icon"></use>
     </svg>
   </a>
   <nav id="nav-right">
@@ -23,13 +25,18 @@
     <a href="./contact">Contact</a>
   </nav>
 </header>
+
 <main>
   <div class="card occupy-remaining">
     <h1>404</h1>
     <h2 id="subtitle"></h2>
-    <p>This page does not exist or may have been moved. Please return to the homepage or check the URL.</p>
+    <p>
+      This page does not exist or may have been moved. Please return to the
+      homepage or check the URL.
+    </p>
   </div>
 </main>
+
 <script>
   const subtitles = [
     "This court is not in session.",
@@ -40,7 +47,7 @@
     "Objection sustained: Page missing.",
     "The case file is missing.",
     "This docket is empty.",
-    "The jury has no record of this page."
+    "The jury has no record of this page.",
   ];
   const randIndex = Math.floor(Math.random() * subtitles.length);
   const subtitle = subtitles[randIndex];

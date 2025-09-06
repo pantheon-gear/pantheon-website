@@ -13,7 +13,7 @@
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url("obra-letra/KCObraLetraRegular.woff2") format("woff2");
+  src: url("KCObraLetraRegular.woff2") format("woff2");
 }
 
 @font-face {
@@ -21,5 +21,5 @@
   font-style: normal;
   font-weight: bold;
   font-display: swap;
-  src: url('obra-letra/KCObraLetraBold.woff2') format('woff2');
+  src: url('KCObraLetraBold.woff2') format('woff2');
 }

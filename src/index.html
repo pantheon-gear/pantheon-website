@@ -1,16 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"/>
   <title>Pantheon</title>
-  <link href="assets/fonts/fonts.css" rel="stylesheet">
-  <link href="stylesheet.css" rel="stylesheet">
+
+  <link href="assets/fonts/fonts.css" rel="stylesheet"/>
+  <link href="styles/main.css" rel="stylesheet"/>
+  <link href="styles/home.css" rel="stylesheet"/>
 </head>
+
 <body>
 <header class="card" id="header">
-  <a href=".">
-    <svg class="shadow" id="home-icon" viewBox="0 0 22 20" width="22" height="20">
-      <use href="assets/home.svg#icon"></use>
+  <a href="." id="home-button">
+    <svg viewBox="0 0 22 20" width="22" height="20">
+      <use href="assets/graphics/home.svg#icon"></use>
     </svg>
   </a>
   <nav id="nav-right">
@@ -19,6 +22,7 @@
     <a href="./contact">Contact</a>
   </nav>
 </header>
+
 <main>
   <div class="card" id="logo-container">
     <svg id="logo-main" viewBox="0 0 705.2 113.5">
@@ -28,14 +32,16 @@
       <use href="assets/pantheon-subtitle.svg#subtitle"></use>
     </svg>
   </div>
+
   <div class="card-grid occupy-remaining">
     <div class="card" id="card1"></div>
     <div class="card" id="card2"></div>
     <div class="card" id="card3"></div>
   </div>
+
   <div class="card" id="footer">
     <a href="https://www.gearac.in/">
-      <svg id="gear-logo" viewBox="0 0 917 1018" height="32px" fill="#f1cd4a">
+      <svg viewBox="0 0 917 1018" height="32px">
         <use href="assets/gear-logo.svg#logo"></use>
       </svg>
     </a>
