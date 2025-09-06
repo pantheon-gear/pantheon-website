@@ -8,7 +8,7 @@ body {
 body {
   background: #a3bdbb radial-gradient(#27655f, transparent 150%) fixed;
   color: #dfdcd4;
-  font-family: Aspekta, Helvetica, Arial, sans-serif;
+  font-family: Aspekta, "Comic Sans MS", Helvetica, Arial, sans-serif;
   font-weight: 450;
   font-size: 16px;
   display: flex;
@@ -55,6 +55,14 @@ a:has(#home-icon) {
   margin: 18px;
 }
 
+#home-icon {
+  transition: filter 200ms;
+}
+
+#home-icon:hover {
+  filter: drop-shadow(0 0 16px #27655fcc);
+}
+
 .shadow {
   filter: drop-shadow(0 0 8px #27655fcc);
 }
@@ -66,9 +74,17 @@ a:has(#home-icon) {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.015em;
+  transition:
+    font-weight 200ms ease,
+    filter 200ms;
 
   &.nav-bold {
+    font-weight: 900;
+  }
+
+  &:hover {
     font-weight: 800;
+    filter: drop-shadow(0 0 16px #27655faa);
   }
 }
 
