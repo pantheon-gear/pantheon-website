@@ -8,7 +8,7 @@ body {
 body {
   background: #a3bdbb radial-gradient(#27655f, transparent 150%) fixed;
   color: #dfdcd4;
-  font-family: Aspekta, "Comic Sans MS", Helvetica, Arial, sans-serif;
+  font-family: Aspekta, Helvetica, Arial, sans-serif;
   font-weight: 450;
   font-size: 16px;
   display: flex;
