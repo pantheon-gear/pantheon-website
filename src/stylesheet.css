@@ -17,7 +17,7 @@ body {
 }
 
 ::selection {
-  background: #27655f;
+  background: #27655fbf;
 }
 
 body::before {
