@@ -10,10 +10,10 @@
 </head>
 
 <body>
-<header class="card" id="header">
-  <a href="." id="home-button">
-    <svg viewBox="0 0 22 20" width="22" height="20">
-      <use href="assets/graphics/home.svg#icon"></use>
+<header class="card align-center" id="header">
+  <a href="." id="home-button" class="shadow" aria-label="Home">
+    <svg aria-hidden="true">
+      <use href="assets/sprite.svg#home-icon"></use>
     </svg>
   </a>
   <nav id="nav-right">
@@ -24,13 +24,16 @@
 </header>
 
 <main>
-  <div class="card" id="logo-container">
-    <svg id="logo-main" viewBox="0 0 705.2 113.5">
-      <use href="assets/graphics/pantheon-title.svg#title"></use>
+  <div class="card column occupy-remaining">
+    <div class="spacer-large"></div>
+    <svg id="logo-main" role="img" aria-label="Pantheon">
+      <use href="assets/sprite.svg#pantheon-title"></use>
     </svg>
-    <svg id="logo-sub" viewBox="0 0 1092 82.58">
-      <use href="assets/graphics/pantheon-subtitle.svg#subtitle"></use>
+    <div class="spacer-small"></div>
+    <svg id="logo-sub" role="img" aria-label="The Temple of Justice">
+      <use href="assets/sprite.svg#pantheon-subtitle"></use>
     </svg>
+    <div class="spacer-large"></div>
   </div>
 
   <div class="card-grid occupy-remaining">
@@ -39,10 +42,10 @@
     <div class="card" id="card3"></div>
   </div>
 
-  <div class="card" id="footer">
-    <a href="https://www.gearac.in/">
-      <svg viewBox="0 0 917 1018" height="32px">
-        <use href="assets/graphics/gear-logo.svg#logo"></use>
+  <div class="card align-center">
+    <a href="https://www.gearac.in/" aria-label="GEAR Website">
+      <svg height="32" aria-hidden="true">
+        <use href="assets/sprite.svg#gear-logo"></use>
       </svg>
     </a>
   </div>

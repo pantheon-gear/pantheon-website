@@ -1,8 +1,24 @@
+:root {
+  --accent: rgb(39, 101, 95);
+  --accent-trans-1: rgba(39, 101, 95, 80%);
+  --accent-trans-2: rgba(39, 101, 95, 67%);
+  --text: #dfdcd4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
+}
+
+body, html {
+  height: 100%;
+}
+
 body {
-  background: #a3bdbb radial-gradient(#27655f, transparent 150%) fixed;
-  height: 100vh;
+  background: #a3bdbb radial-gradient(var(--accent), transparent 150%) fixed;
   margin: 0;
-  color: #dfdcd4;
+  color: var(--text);
   font-family: Aspekta, Helvetica, Arial, sans-serif;
   font-weight: 450;
   font-size: 16px;
@@ -23,7 +39,7 @@ body::before {
 }
 
 ::selection {
-  background: #27655fbf;
+  background: var(--accent-trans-1);
 }
 
 main {
@@ -37,21 +53,20 @@ main {
 .card {
   background: #ffffff33;
   border: 1px solid #ffffff5c;
-  border-radius: 28px;
   min-height: 56px;
+  border-radius: 28px;
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 48px;
 }
 
-.flex-center {
-  display: flex;
+.align-center {
   align-items: center;
-  justify-content: center;
+}
+
+.column {
+  flex-direction: column;
 }
 
 .occupy-remaining,
@@ -65,36 +80,35 @@ main {
 }
 
 .shadow {
-  filter: drop-shadow(0 0 8px #27655fcc);
-}
-
-#footer {
-  flex-direction: row;
-  padding: 0;
+  filter: drop-shadow(0 0 8px var(--accent-trans-1));
 }
 
 #header {
-  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 24px;
   margin: 0 24px 24px 24px;
-  z-index: 1;
-  padding: 0;
 }
 
-#home-button {
+#home-button{
   width: 22px;
   height: 20px;
   margin: 18px;
 }
 
-#home-button > a {
+#home-button {
   transition: filter 200ms;
 }
 
-#home-button > a:hover {
-  filter: drop-shadow(0 0 16px #27655fcc);
+#home-button:hover {
+  filter: drop-shadow(0 0 16px var(--accent-trans-2));
+}
+
+#home-button > svg {
+  fill: var(--text);
+  width: 22px;
+  height: 20px;
 }
 
 #nav-right > a {
@@ -115,5 +129,5 @@ main {
 
 #nav-right > a:hover {
   font-weight: 800;
-  filter: drop-shadow(0 0 16px #27655faa);
+  filter: drop-shadow(0 0 16px var(--accent-trans-2));
 }

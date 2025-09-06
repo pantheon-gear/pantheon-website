@@ -1,20 +1,22 @@
-#logo-container {
-  padding: 72px;
-  gap: 32px;
+#logo-main, #logo-sub {
+  flex-basis: 0;
+  margin: 0 8%;
+  filter: drop-shadow(0 3px 2px #27655fcc);
+  fill: var(--text);
+}
+
+.spacer-large {
+  flex-grow: 2.25;
+}
+
+.spacer-small {
+  flex-grow: 1;
 }
 
 #logo-main {
-  font-size: 10rem;
-  line-height: 0.7em;
-  width: 50vw;
-  max-width: 800px;
-  filter: drop-shadow(0 3px 2px #27655fcc);
+  flex-grow: 3;
 }
 
 #logo-sub {
-  font-size: 6rem;
-  line-height: 0.7em;
-  width: 75vw;
-  max-width: 1300px;
-  filter: drop-shadow(0 3px 2px #27655fcc);
+  flex-grow: 2;
 }
