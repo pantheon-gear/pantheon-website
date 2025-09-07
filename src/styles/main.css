@@ -45,7 +45,7 @@ a {
   text-decoration: underline var(--accent) solid 2px;
   text-underline-position: from-font;
   color: inherit;
-  font-weight: 600;
+  font-weight: 650;
   transition: font-weight 200ms ease,
   filter 200ms;
   position: relative;
@@ -119,7 +119,6 @@ main {
   top: var(--space);
   align-items: center;
   justify-content: space-between;
-  padding: 0;
   margin: 0 var(--space) var(--space) var(--space);
 }
 
@@ -151,8 +150,8 @@ main {
 }
 
 .progressive-blur {
-  --top: calc(var(--header-offset) - 29px);
-  --height: calc(var(--space) + 29px);
+  --top: calc(var(--header-offset) - (var(--card-min-outer-height) / 2));
+  --height: calc(var(--space) + (var(--card-min-outer-height) / 2));
 
   content: "";
   position: fixed;
@@ -247,7 +246,7 @@ main {
     display: contents;
   }
 
-  .card-grid > .card:not(:empty) {
+  .card-grid > .card {
     flex-grow: 0;
   }
 }

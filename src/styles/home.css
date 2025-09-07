@@ -1,7 +1,7 @@
 #logo-main, #logo-sub {
   flex-basis: 0;
   margin: 0 8%;
-  filter: drop-shadow(0 3px 2px #27655fcc);
+  filter: drop-shadow(0 3px 2px var(--accent-trans-1));
   fill: var(--text);
 }
 
