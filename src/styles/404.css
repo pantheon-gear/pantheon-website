@@ -7,12 +7,18 @@ h1 {
 
 h2 {
   font-family: obra-letra, Aspekta, Helvetica, Arial, sans-serif;
+  font-weight: normal;
   margin: 0;
   text-wrap: balance;
   font-size: 2.5rem;
-  font-weight: normal;
 }
 
 p {
   max-width: 30em;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
 }

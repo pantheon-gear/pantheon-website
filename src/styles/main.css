@@ -3,15 +3,20 @@
   --accent-trans-1: rgba(39, 101, 95, 80%);
   --accent-trans-2: rgba(39, 101, 95, 67%);
   --text: #dfdcd4;
+
+  --space: 24px;
+
+  --card-border-width: 1px;
+  --card-radius: 28px;
+  --card-min-content-height: calc(2 * var(--card-radius));
+  --card-min-outer-height: calc(
+    var(--card-min-content-height) + 2 * var(--card-border-width)
+  );
+  --header-offset: calc(var(--space) + var(--card-min-outer-height));
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none;
-  }
-}
-
-body, html {
+body,
+html {
   height: 100%;
 }
 
@@ -35,15 +40,15 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 24px;
-  gap: 24px;
+  padding: var(--space);
+  gap: var(--space);
 }
 
 .card {
   background: #ffffff33;
-  border: 1px solid #ffffff5c;
-  min-height: 56px;
-  border-radius: 28px;
+  border: var(--card-border-width) solid #ffffff5c;
+  min-height: var(--card-min-content-height);
+  border-radius: var(--card-radius);
   position: relative;
   display: flex;
   justify-content: center;
@@ -66,7 +71,7 @@ main {
 
 .card-grid {
   display: flex;
-  gap: 24px;
+  gap: var(--space);
 }
 
 .shadow {
@@ -74,14 +79,15 @@ main {
 }
 
 #header {
+  z-index: 1;
   align-items: center;
   justify-content: space-between;
   position: sticky;
-  top: 24px;
-  margin: 0 24px 24px 24px;
+  top: var(--space);
+  margin: 0 var(--space) var(--space) var(--space);
 }
 
-#home-button{
+#home-button {
   width: 22px;
   height: 20px;
   margin: 18px;
@@ -120,4 +126,105 @@ main {
 #nav-right > a:hover {
   font-weight: 800;
   filter: drop-shadow(0 0 16px var(--accent-trans-2));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body,
+  html {
+    height: auto;
+  }
+
+  .card-grid {
+    display: contents;
+  }
+
+  main {
+    flex: none;
+  }
+}
+
+.progressive-blur {
+  --top: calc(var(--header-offset) - 29px);
+  --height: calc(var(--space) + 29px);
+
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(var(--header-offset) + var(--space));
+  pointer-events: none;
+
+  --step-0: var(--top);
+  --step-1: calc(var(--top) + (var(--height) * 0.2));
+  --step-2: calc(var(--top) + (var(--height) * 0.4));
+  --step-3: calc(var(--top) + (var(--height) * 0.6));
+  --step-4: calc(var(--top) + (var(--height) * 0.8));
+}
+
+.progressive-blur > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.progressive-blur > div:nth-child(1) {
+  z-index: 1;
+  backdrop-filter: blur(16px);
+  mask-image: linear-gradient(
+    to bottom,
+    black 0 var(--step-0),
+    transparent var(--step-1)
+  );
+}
+
+.progressive-blur > div:nth-child(2) {
+  z-index: 2;
+  backdrop-filter: blur(8px);
+  mask-image: linear-gradient(
+    to bottom,
+    black var(--step-0) var(--step-1),
+    transparent var(--step-2)
+  );
+}
+
+.progressive-blur > div:nth-child(3) {
+  z-index: 3;
+  backdrop-filter: blur(4px);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent var(--step-0),
+    black var(--step-1) var(--step-2),
+    transparent var(--step-3)
+  );
+}
+
+.progressive-blur > div:nth-child(4) {
+  z-index: 4;
+  backdrop-filter: blur(2px);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent var(--step-1),
+    black var(--step-2) var(--step-3),
+    transparent var(--step-4)
+  );
+}
+
+.progressive-blur > div:nth-child(5) {
+  z-index: 5;
+  backdrop-filter: blur(1px);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent var(--step-2),
+    black var(--step-3) var(--step-4),
+    transparent 100%
+  );
 }

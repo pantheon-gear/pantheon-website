@@ -20,3 +20,9 @@
 #logo-sub {
   flex-grow: 2;
 }
+
+@media (max-width: 768px) {
+  #logo-container {
+    min-height: 33vw;
+  }
+}
