@@ -1,74 +1,76 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Pantheon</title>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Pantheon</title>
 
-    <link
-      rel="preload"
-      href="assets/fonts/AspektaVF.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link href="assets/fonts/fonts.css" rel="stylesheet" />
-    <link href="styles/main.css" rel="stylesheet" />
-    <link href="styles/home.css" rel="stylesheet" />
-  </head>
+  <link
+    rel="preload"
+    href="assets/fonts/AspektaVF.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link href="assets/fonts/fonts.css" rel="stylesheet"/>
+  <link href="styles/main.css" rel="stylesheet"/>
+  <link href="styles/home.css" rel="stylesheet"/>
+</head>
 
-  <body>
-    <header class="card align-center" id="header">
-      <a href="." id="home-button" class="shadow" aria-label="Home">
-        <svg aria-hidden="true">
-          <use href="assets/sprite.svg#home-icon"></use>
-        </svg>
-      </a>
-      <nav id="nav-right">
-        <a href="./events">Events</a>
-        <a href="./register">Register</a>
-        <a href="./contact">Contact</a>
-      </nav>
-    </header>
+<body>
+<header class="card align-center" id="header">
+  <a href="." id="home-button" class="shadow" aria-label="Home">
+    <svg aria-hidden="true">
+      <use href="assets/sprite.svg#home-icon"></use>
+    </svg>
+  </a>
+  <nav id="nav-right">
+    <a href="./events">Events</a>
+    <a href="./register">Register</a>
+    <a href="./contact">Contact</a>
+  </nav>
+</header>
 
-    <main>
-      <div class="card column occupy-remaining no-padding" id="logo-container">
-        <div class="spacer-large"></div>
-        <svg id="logo-main" role="img" aria-label="Pantheon">
-          <use href="assets/sprite.svg#pantheon-title"></use>
-        </svg>
-        <div class="spacer-small"></div>
-        <svg id="logo-sub" role="img" aria-label="The Temple of Justice">
-          <use href="assets/sprite.svg#pantheon-subtitle"></use>
-        </svg>
-        <div class="spacer-large"></div>
+<main>
+  <div class="card column occupy-remaining no-padding" id="logo-container">
+    <div class="spacer-large"></div>
+    <svg id="logo-main" role="img" aria-label="Pantheon">
+      <use href="assets/sprite.svg#pantheon-title"></use>
+    </svg>
+    <div class="spacer-small"></div>
+    <svg id="logo-sub" role="img" aria-label="The Temple of Justice">
+      <use href="assets/sprite.svg#pantheon-subtitle"></use>
+    </svg>
+    <div class="spacer-large"></div>
+  </div>
+
+  <div class="card-grid occupy-remaining">
+    <div class="card no-padding" id="card-1"></div>
+    <div class="card" id="card-2">
+      <div class="card-content column">
+        <h1>This is a work-in-progress website.</h1>
+        <p>
+          <a href="https://github.com/pantheon-gear/pantheon-website/">Click here</a> to visit the Github repository.
+        </p>
       </div>
-
-      <div class="card-grid occupy-remaining">
-        <div class="card" id="card-1"></div>
-        <div class="card column" id="card-2">
-          <h1>This is a work-in-progress website.</h1>
-          <p>
-            <a href="https://github.com/pantheon-gear/pantheon-website/">Click here</a> to visit the Github repository.
-          </p>
-        </div>
-        <div class="card" id="card-3"></div>
-      </div>
-
-      <div class="card align-center no-padding">
-        <a href="https://www.gearac.in/" aria-label="GEAR Website">
-          <svg height="32" aria-hidden="true">
-            <use href="assets/sprite.svg#gear-logo"></use>
-          </svg>
-        </a>
-      </div>
-    </main>
-
-    <div class="progressive-blur">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
     </div>
-  </body>
+    <div class="card no-padding" id="card-3"></div>
+  </div>
+
+  <div class="card align-center no-padding">
+    <a href="https://www.gearac.in/" aria-label="GEAR Website">
+      <svg aria-hidden="true" id="gear-logo">
+        <use href="assets/sprite.svg#gear-logo"></use>
+      </svg>
+    </a>
+  </div>
+</main>
+
+<div class="progressive-blur">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+</body>
 </html>

@@ -33,6 +33,10 @@ body {
   text-wrap: pretty;
 }
 
+svg {
+  display: block;
+}
+
 ::selection {
   background: var(--accent-trans-1);
 }
@@ -42,9 +46,8 @@ a {
   text-underline-position: from-font;
   color: inherit;
   font-weight: 600;
-  transition:
-    font-weight 200ms ease,
-    filter 200ms;
+  transition: font-weight 200ms ease,
+  filter 200ms;
   position: relative;
 }
 
@@ -75,6 +78,12 @@ main {
   justify-content: center;
   text-align: center;
   backdrop-filter: blur(64px);
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   padding: var(--card-padding);
 }
 
@@ -115,12 +124,7 @@ main {
 }
 
 #home-button {
-  width: 22px;
-  height: 20px;
-  margin: 18px;
-}
-
-#home-button {
+  margin: calc((var(--card-min-content-height) - 20px) / 2);
   transition: filter 200ms;
 }
 
@@ -135,31 +139,15 @@ main {
 }
 
 #nav-right > a {
-  text-decoration: none;
+  text-decoration-line: none;
   text-transform: uppercase;
   letter-spacing: 0.015em;
-  margin-right: 28px;
+  margin-right: var(--card-radius);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none;
-  }
-}
-
-@media (max-width: 768px) {
-  body,
-  html {
-    height: auto;
-  }
-
-  .card-grid {
-    display: contents;
-  }
-
-  main {
-    flex: none;
-  }
+#gear-logo {
+  height: 32px;
+  aspect-ratio: 917 / 1018;
 }
 
 .progressive-blur {
@@ -240,4 +228,26 @@ main {
     black var(--step-3) var(--step-4),
     transparent 100%
   );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body,
+  html {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .card-grid {
+    display: contents;
+  }
+
+  .card-grid > .card:not(:empty) {
+    flex-grow: 0;
+  }
 }

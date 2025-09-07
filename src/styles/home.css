@@ -36,6 +36,7 @@ p {
 
 @media (max-width: 768px) {
   #logo-container {
-    min-height: 33vw;
+    height: 33vw;
+    flex: none;
   }
 }
