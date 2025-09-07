@@ -21,6 +21,19 @@
   flex-grow: 2;
 }
 
+h1 {
+  font-family: obra-letra, Aspekta, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin: 0 0 0.5em 0;
+  line-height: 1;
+  text-wrap: balance;
+  font-size: 2rem;
+}
+
+p {
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   #logo-container {
     min-height: 33vw;

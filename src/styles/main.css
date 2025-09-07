@@ -5,6 +5,7 @@
   --text: #dfdcd4;
 
   --space: 24px;
+  --card-padding: 32px;
 
   --card-border-width: 1px;
   --card-radius: 28px;
@@ -36,6 +37,26 @@ body {
   background: var(--accent-trans-1);
 }
 
+a {
+  text-decoration: underline var(--accent) solid 2px;
+  text-underline-position: from-font;
+  color: inherit;
+  font-weight: 600;
+  transition:
+    font-weight 200ms ease,
+    filter 200ms;
+  position: relative;
+}
+
+a.bold {
+  font-weight: 900;
+}
+
+a:hover {
+  font-weight: 800;
+  filter: drop-shadow(0 0 16px var(--accent-trans-2));
+}
+
 main {
   flex: 1;
   display: flex;
@@ -54,6 +75,7 @@ main {
   justify-content: center;
   text-align: center;
   backdrop-filter: blur(64px);
+  padding: var(--card-padding);
 }
 
 .align-center {
@@ -62,6 +84,10 @@ main {
 
 .column {
   flex-direction: column;
+}
+
+.no-padding {
+  padding: 0;
 }
 
 .occupy-remaining,
@@ -80,10 +106,11 @@ main {
 
 #header {
   z-index: 1;
-  align-items: center;
-  justify-content: space-between;
   position: sticky;
   top: var(--space);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
   margin: 0 var(--space) var(--space) var(--space);
 }
 
@@ -108,24 +135,10 @@ main {
 }
 
 #nav-right > a {
-  margin-right: 28px;
   text-decoration: none;
-  color: inherit;
   text-transform: uppercase;
-  font-weight: 600;
   letter-spacing: 0.015em;
-  transition:
-    font-weight 200ms ease,
-    filter 200ms;
-}
-
-#nav-right > a.nav-bold {
-  font-weight: 900;
-}
-
-#nav-right > a:hover {
-  font-weight: 800;
-  filter: drop-shadow(0 0 16px var(--accent-trans-2));
+  margin-right: 28px;
 }
 
 @media (prefers-reduced-motion: reduce) {
