@@ -232,7 +232,7 @@ main {
 
 @media (prefers-reduced-motion: reduce) {
   * {
-    transition: none;
+    transition: none !important;
   }
 }
 
