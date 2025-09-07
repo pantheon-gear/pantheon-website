@@ -249,4 +249,9 @@ main {
   .card-grid > .card {
     flex-grow: 0;
   }
+
+  /* TODO: add hamburger menu */
+  #nav-right {
+    display: none;
+  }
 }
