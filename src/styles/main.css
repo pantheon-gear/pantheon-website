@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background: radial-gradient(var(--accent), #a3bdbb 150%) fixed;
+  background: #a3bdbb radial-gradient(var(--accent), #a3bdbb 150%) fixed;
   margin: 0;
   color: var(--text);
   font-family: Aspekta, Helvetica, Arial, sans-serif;
